@@ -1,7 +1,9 @@
 import * as _stitches_react_types_styled_component from '@stitches/react/types/styled-component';
 import * as _stitches_react_types_css_util from '@stitches/react/types/css-util';
+import * as react from 'react';
 import { ComponentProps, ElementType } from 'react';
 import { ComponentProps as ComponentProps$1 } from '@stitches/react';
+import * as Avatar$1 from '@radix-ui/react-avatar';
 
 declare const Box: _stitches_react_types_styled_component.StyledComponent<"div", {}, {}, _stitches_react_types_css_util.CSS<{}, {
     colors: {
@@ -76,8 +78,8 @@ declare const Box: _stitches_react_types_styled_component.StyledComponent<"div",
         80: string;
     };
 }, {
-    height: "space";
     width: "space";
+    height: "space";
     gap: "space";
     gridGap: "space";
     columnGap: "space";
@@ -284,8 +286,8 @@ declare const Text: _stitches_react_types_styled_component.StyledComponent<"p", 
         80: string;
     };
 }, {
-    height: "space";
     width: "space";
+    height: "space";
     gap: "space";
     gridGap: "space";
     columnGap: "space";
@@ -492,8 +494,8 @@ declare const Heading: _stitches_react_types_styled_component.StyledComponent<"h
         80: string;
     };
 }, {
-    height: "space";
     width: "space";
+    height: "space";
     gap: "space";
     gridGap: "space";
     columnGap: "space";
@@ -625,4 +627,10 @@ interface HeadingProps extends ComponentProps<typeof Heading> {
     as?: ElementType;
 }
 
-export { Box, BoxProps, Heading, HeadingProps, Text, TextProps };
+declare const AvatarImage: _stitches_react_types_styled_component.StyledComponent<react.ForwardRefExoticComponent<Avatar$1.AvatarImageProps & react.RefAttributes<HTMLImageElement>>, {}, {}, _stitches_react_types_css_util.CSS<{}, {}, {}, {}>>;
+
+interface AvatarProps extends ComponentProps<typeof AvatarImage> {
+}
+declare function Avatar(props: AvatarProps): JSX.Element;
+
+export { Avatar, AvatarProps, Box, BoxProps, Heading, HeadingProps, Text, TextProps };

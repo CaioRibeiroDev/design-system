@@ -104,8 +104,8 @@ var {
   config
 } = createStitches({
   themeMap: __spreadProps(__spreadValues({}, defaultThemeMap), {
-    height: "space",
-    width: "space"
+    width: "space",
+    height: "space"
   }),
   theme: {
     colors,
@@ -176,7 +176,48 @@ var Heading = styled("h2", {
     size: "md"
   }
 });
+
+// src/components/Avatar/styles.ts
+import * as Avatar from "@radix-ui/react-avatar";
+import { styled as styled2 } from "@stitches/react";
+var AvatarContainer = styled2(Avatar.Root, {
+  borderRadius: "$full",
+  display: "inline-block",
+  width: "3rem",
+  height: "3rem",
+  overflow: "hidden"
+});
+var AvatarImage = styled2(Avatar.Image, {
+  width: "100%",
+  height: "100%",
+  objectFit: "cover",
+  borderRadius: "inherit"
+});
+var AvatarFallback = styled2(Avatar.Fallback, {
+  width: "100%",
+  height: "100%",
+  display: "flex",
+  alignItems: "center",
+  justifyContent: "center",
+  backgroundColor: "$gray600",
+  color: "$gray800",
+  svg: {
+    width: "1.5rem",
+    height: "1.5rem"
+  }
+});
+
+// src/components/Avatar/index.tsx
+import { User } from "phosphor-react";
+import { jsx, jsxs } from "react/jsx-runtime";
+function Avatar2(props) {
+  return /* @__PURE__ */ jsxs(AvatarContainer, { children: [
+    /* @__PURE__ */ jsx(AvatarImage, __spreadValues({}, props)),
+    /* @__PURE__ */ jsx(AvatarFallback, { delayMs: 600, children: /* @__PURE__ */ jsx(User, {}) })
+  ] });
+}
 export {
+  Avatar2 as Avatar,
   Box,
   Heading,
   Text
