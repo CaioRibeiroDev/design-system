@@ -1,0 +1,2 @@
+import{A as t}from"./index.c6e3afb4.js";import"./index.68eb0f74.js";import"./iframe.bae22a1f.js";import"./index.f52e76f8.js";import"./jsx-runtime.aaefef3c.js";const c={title:"Data display/Avatar",component:t,args:{src:"https://github.com/caioribeirodev.png",alt:"Caio Ribeiro"},argTypes:{src:{control:{type:"text"}}}},e={},p={args:{src:void 0}},m=["Primary","WithFallback"];export{e as Primary,p as WithFallback,m as __namedExportsOrder,c as default};
+//# sourceMappingURL=Avatar.stories.b837e5b0.js.map
